@@ -5,6 +5,9 @@
 * (C)2012-2016 Stanley Huang <stanleyhuangyc@gmail.com>
 *************************************************************************/
 
+#ifndef OBD2UART_H
+#define OBD2UART_H
+
 #include <Arduino.h>
 
 #define OBD_TIMEOUT_SHORT 1000 /* ms */
@@ -192,3 +195,4 @@ private:
 	bool m_fusion = false;
 };
 
+#endif // OBD2UART_H

@@ -5,6 +5,9 @@
 * (C)2012-2016 Stanley Huang <stanleyhuangyc@gmail.com>
 *************************************************************************/
 
+#ifndef OBD_H
+#define OBD_H
+
 #include <Arduino.h>
 
 #define OBD_MODEL_UART 0
@@ -241,3 +244,5 @@ private:
 	bool MPU6050_write_reg(int reg, uint8_t data);
 	void MPU6050_store(int* pData, uint8_t data_l, uint8_t data_h);
 };
+
+#endif // OBD_H
