@@ -77,6 +77,9 @@
 #define PID_ENGINE_TORQUE_DEMANDED 0x61
 #define PID_ENGINE_TORQUE_PERCENTAGE 0x62
 #define PID_ENGINE_REF_TORQUE 0x63
+#define PID_TURBO_RPM 0x74
+#define PID_TURBO_A_TEMP 0x75
+#define PID_TURBO_B_TEMP 0x76
 
 // non-OBD/custom PIDs (no mode number)
 #define PID_GPS_LATITUDE 0xA
