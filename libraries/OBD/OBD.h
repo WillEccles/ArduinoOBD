@@ -120,6 +120,7 @@ typedef enum {
 
 uint16_t hex2uint16(const char *p);
 uint8_t hex2uint8(const char *p);
+uint32_t hex2uint32(const char* p);
 
 class COBD
 {

@@ -29,6 +29,12 @@ uint16_t hex2uint16(const char *p)
 	return i;
 }
 
+uint32_t hex2uint32(const char* p) {
+	uint32_t i = 0;
+	i = (hex2uint16(p) << 16) | hex2uint16(p+4);
+	return i;
+}
+
 byte hex2uint8(const char *p)
 {
 	byte c1 = *p;
@@ -211,6 +217,15 @@ int COBD::normalizeData(byte pid, char* data)
 		break;
 	case PID_AIR_FUEL_EQUIV_RATIO: // 0~200
 		result = (long)getLargeValue(data) * 200 / 65536;
+		break;
+	case PID_TURBO_A_TEMP:
+	case PID_TURBO_B_TEMP:
+		// these are both 7 byte values, skip the 3 most significant
+		result = hex2uint32(data+3);
+		break;
+	case PID_TURBO_RPM:
+		// this is a 5 byte value, skip the MSB
+		result = hex2uint32(data+1);
 		break;
 	default:
 		result = getSmallValue(data);
