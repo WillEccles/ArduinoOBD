@@ -33,7 +33,7 @@ uint16_t hex2uint16(const char *p)
 
 uint32_t hex2uint32(const char* p) {
 	uint32_t i = 0;
-	i = (hex2uint16(p) << 16) | hex2uint16(p+4);
+	i = ((uint32_t)hex2uint16(p) << 16) | hex2uint16(p+4);
 	return i;
 }
 
