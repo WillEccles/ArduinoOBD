@@ -8,9 +8,6 @@
 #ifndef OBD2UART_H
 #define OBD2UART_H
 
-// comment this line to calculate percents at runtime (slower, but less progmem usage)
-#define USE_LOOKUP
-
 #include <Arduino.h>
 
 #define OBD_TIMEOUT_SHORT 1000 /* ms */
