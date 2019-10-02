@@ -533,7 +533,7 @@ byte COBD::checkErrorMessage(const char* buffer)
 
 uint8_t COBD::getPercentageValue(char* data)
 {
-  return (uint8_t)((float)hex2uint8(data) * 100.f / 255.f);
+  return (uint16_t)hex2uint8(data) * 100 / 255;
 }
 
 uint16_t COBD::getLargeValue(char* data)
